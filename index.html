@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO Premium -->
+    <title>Barbearia do Nonato | Experiência Premium em Parnaíba</title>
+    <meta name="description" content="Desde 2012, a Barbearia do Nonato redefiniu o conceito de barbearia em Parnaíba. Experiência premium, cortes cinematográficos e atendimento de elite.">
+    <meta name="keywords" content="barbearia luxo Parnaíba, corte masculino premium, barba designer, barbearia vintage, experiência grooming">
+    <meta name="author" content="Barbearia do Nonato">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barbeariadononato.com">
+    <meta property="og:title" content="Barbearia do Nonato | Tradição e Sofisticação">
+    <meta property="og:description" content="Experimente o melhor grooming de Parnaíba em um ambiente exclusivo.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80">
+    
+    <!-- Favicon com animação -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='3.5' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c9a44c' filter='url(%23glow)'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%230a0a0a' font-weight='bold'%3E💈%3C/text%3E%3C/svg%3E">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload de fontes e imagens -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- HEADER FIXO COM EFEITO GLASS -->
+    <header id="header" class="header-glass">
+        <nav class="container nav-container">
+            <a href="#" class="logo" aria-label="Barbearia do Nonato - Início">
+                <span class="logo-text">NONATO</span>
+                <span class="logo-barber">💈</span>
+                <span class="logo-year">est.2012</span>
+            </a>
+            
+            <!-- Menu Desktop -->
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link" data-text="Início">Início</a></li>
+                <li><a href="#sobre" class="nav-link" data-text="Sobre">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link" data-text="Serviços">Serviços</a></li>
+                <li><a href="#galeria" class="nav-link" data-text="Galeria">Galeria</a></li>
+                <li><a href="#agendamento" class="nav-link" data-text="Agendar">Agendar</a></li>
+                <li><a href="#localizacao" class="nav-link" data-text="Localização">Localização</a></li>
+            </ul>
+            
+
+            <!-- Menu Hamburguer Premium -->
+            <div class="hamburger-premium">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION CINEMATOGRÁFICO -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-video-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-line"></span>
+                <span class="badge-text">PREMIUM BARBERSHOP</span>
+                <span class="badge-line"></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Barbearia</span>
+                <span class="title-line highlight">do Nonato</span>
+            </h1>
+            <p class="hero-subtitle">Desde 2012 elevando seu estilo em Parnaíba</p>
+            <div class="hero-cta">
+                <a href="#agendamento" class="btn btn-primary">
+                    <span>Agendar Horário</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="#sobre" class="btn btn-outline">
+                    <span>Conhecer Espaço</span>
+                </a>
+            </div>
+            <div class="hero-scroll">
+                <span class="scroll-text">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE SECTION COM PARALLAX -->
+    <section id="sobre" class="section sobre-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nossa História</span>
+                <h2 class="section-title">Tradição e <span class="gold-text">Excelência</span></h2>
+            <div class="sobre-grid">
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <p class="sobre-paragrafo lead">Há mais de uma década, a <strong class="gold-text">Barbearia do Nonato</strong> vem escrevendo sua história no coração de Parnaíba. Mais que uma barbearia, somos um santuário da masculinidade e do estilo.</p>
+                        <p class="sobre-paragrafo">Fundada pelo Mestre Nonato, nossa casa é ponto de encontro de gerações. Cada detalhe foi pensado para proporcionar uma experiência única: do aroma do café fresco ao som do vinil, da navalha aquecida ao corte perfeito.</p>
+                        <p class="sobre-paragrafo">Aqui, cada cliente é recebido como um gentleman e tratado com a excelência que merece. Utilizamos as melhores técnicas, produtos importados e um atendimento que faz você se sentir em casa.</p>
+                    </div>
+                    
+                    <div class="sobre-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">👑</div>
+                            <div class="feature-text">
+                                <h4>Atendimento VIP</h4>
+                                <p>Experiência personalizada</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✂️</div>
+                            <div class="feature-text">
+                                <h4>Técnicas Premium</h4>
+                                <p>Tesouraria alemã</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🥃</div>
+                            <div class="feature-text">
+                                <h4>Whiskey & Café</h4>
+                                <p>Corte com estilo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sobre-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="6">0</div>
+                        <div class="stat-label">Anos de História</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="1500">0</div>
+                        <div class="stat-label">Cortes Realizados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">% Satisfação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS COM CARDS 3D -->
+    <section id="servicos" class="section servicos-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">O que oferecemos</span>
+                <h2 class="section-title">Serviços <span class="gold-text">Premium</span></h2>
+            
+            <div class="servicos-grid">
+                <div class="servico-card" data-tilt>
+                    <div class="card-badge">Mais Pedido</div>
+                    <div class="card-image">
+                        <div class="image-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Masculino">
+                    </div>
+                    <div class="card-content">
+                        <h3>Corte <span>Masculino</span></h3>
+                        <p>Corte moderno ou tradicional com acabamento perfeito, tesoura alemã e máquinas de alta precisão.</p>
+                        <div class="card-footer">
+                            <span class="price">R$ 45</span>
+                            <span class="time">⏱️ 40min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="servico-card" data-tilt>
+                    <div class="card-image">
+                        <div class="image-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Barba">
+                    </div>
+                    <div class="card-content">
+                        <h3>Barba <span>Designer</span></h3>
+                        <p>Barba feita com toalha quente, navalha e produtos específicos para sua pele. Massagem com óleos.</p>
+                        <div class="card-footer">
+                            <span class="price">R$ 35</span>
+                            <span class="time">⏱️ 30min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="servico-card" data-tilt>
+                    <div class="card-badge">Combo</div>
+                    <div class="card-image">
+                        <div class="image-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte + Barba">
+                    </div>
+                    <div class="card-content">
+                        <h3>Corte + <span>Barba</span></h3>
+                        <p>Combo completo para você sair renovado. O preferido da casa! Inclui finalização e café especial.</p>
+                        <div class="card-footer">
+                            <span class="price">R$ 70</span>
+                            <span class="time">⏱️ 70min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="servico-card" data-tilt>
+                    <div class="card-image">
+                        <div class="image-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Acabamento">
+                    </div>
+                    <div class="card-content">
+                        <h3>Acabamento <span>Premium</span></h3>
+                        <p>Pezinhos, sobrancelha, hidratação e finalização com produtos importados de primeira linha.</p>
+                        <div class="card-footer">
+                            <span class="price">R$ 25</span>
+                            <span class="time">⏱️ 20min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA COM LIGHTBOX -->
+    <section id="galeria" class="section galeria-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Portfólio</span>
+                <h2 class="section-title">Nossa <span class="gold-text">Arte</span></h2>
+        <div class="galeria-grid">
+            <div class="galeria-item" data-index="0">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Degradê Perfeito">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Degradê Perfeito</h4>
+                        <p>Corte moderno</p>
+                    </div>
+                </div>
+            </div>
+            <div class="galeria-item" data-index="1">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barba Navalhada">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Barba Navalhada</h4>
+                        <p>Toalha quente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="galeria-item" data-index="2">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corte Social">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Corte Social</h4>
+                        <p>Estilo executivo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="galeria-item" data-index="3">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Finalização">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Finalização</h4>
+                        <p>Produtos importados</p>
+                    </div>
+                </div>
+            </div>
+            <div class="galeria-item" data-index="4">
+                <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barba">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Barba Alinhada</h4>
+                        <p>Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="galeria-item" data-index="5">
+                <img src="https://images.unsplash.com/photo-1540553016722-983aa48d5300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corte Infantil">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Corte Infantil</h4>
+                        <p>Desde pequeno</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENDAMENTO PREMIUM -->
+    <section id="agendamento" class="section agendamento-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Reserve seu horário</span>
+                <h2 class="section-title">Agendamento <span class="gold-text">Exclusivo</span></h2>
+
+            </div>
+            
+            <div class="agendamento-wrapper">
+                <div class="agendamento-card">
+                    <div class="card-bg-pattern"></div>
+                    <form id="agendamento-form" class="agendamento-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="servico">Serviço desejado *</label>
+                                <div class="select-wrapper">
+                                    <select id="servico" name="servico" required>
+                                        <option value="" disabled selected>Selecione um serviço</option>
+                                        <option value="Corte masculino">Corte Masculino - R$ 45</option>
+                                        <option value="Barba">Barba - R$ 35</option>
+                                        <option value="Corte + Barba">Corte + Barba - R$ 70</option>
+                                        <option value="Acabamento">Acabamento - R$ 25</option>
+                                    </select>
+                                    <span class="select-arrow">▼</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="data">Data do agendamento *</label>
+                                <input type="date" id="data" name="data" required min="">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="horario">Horário preferencial *</label>
+                                <div class="select-wrapper">
+                                    <select id="horario" name="horario" required>
+                                        <option value="" disabled selected>Selecione um horário</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                    </select>
+                                    <span class="select-arrow">▼</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profissional">Profissional (opcional)</label>
+                                <div class="select-wrapper">
+                                    <select id="profissional">
+                                        <option value="Nonato">Nonato (Mestre)</option>
+                                        <option value="Junior">Junior (Especialista)</option>
+                                        <option value="Marcos">Marcos (Designer)</option>
+                                    </select>
+                                    <span class="select-arrow">▼</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="confirmar" checked disabled>
+                            <label for="confirmar">Ao agendar, você concorda com nossa política de cancelamento com 2h de antecedência</label>
+                        </div>
+                        
+                        <button type="button" id="agendar-whatsapp" class="btn btn-agendar">
+                            <span>Agendar via WhatsApp</span>
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="" class="btn-whatsapp-icon">
+                        </button>
+                    </form>
+                    
+                    <div class="agendamento-info">
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <h4>Atendimento</h4>
+                                <p>Terça a Sábado, 9h às 19h</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏰</span>
+                            <div>
+                                <h4>Duração média</h4>
+                                <p>40 a 70 minutos por serviço</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Av. 19 de Outubro - Centro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- LOCALIZAÇÃO COM MAPA INTERATIVO -->
+<section id="localizacao" class="section localizacao-section">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-tag">Onde nos encontrar</span>
+            <h2 class="section-title">
+                Localização <span class="gold-text">Estratégica</span>
+            </h2>
+        </div>
+
+        <div class="localizacao-grid">
+
+            <!-- INFO -->
+            <div class="localizacao-info">
+                <div class="info-card">
+                    
+                    <h3>Barbearia do Nonato</h3>
+
+                    <p class="endereco-destaque">Av. do Contorno</p>
+                    <p class="bairro">Bairro Projetado - Parnaíba/PI</p>
+                    <p class="cep">Código: 37MC+R5</p>
+
+                    <div class="info-details">
+                        <div class="detail">
+                            <span class="detail-icon">📞</span>
+                            <span>(86) 99464-5340</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-icon">✉️</span>
+                            <span>contato@barbeariadononato.com</span>
+                        </div>
+                    </div>
+
+                    <div class="horarios">
+                        <h4>Horário de funcionamento</h4>
+                        <ul>
+                            <li><span>Segunda a Sabado:</span> 09:00 - 19:00</li>
+                            <li><span>Sábado:</span> 09:00 - 17:00</li>
+                            <li><span>Domingo:</span> Fechado</li>
+                        </ul>
+                    </div>
+
+                    <!-- BOTÕES -->
+                    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av+do+Contorno+Parnaiba+PI"
+                           target="_blank"
+                           class="btn btn-mapa">
+                            📍 Abrir no Google Maps
+                        </a>
+
+                        <a href="https://wa.me/5586994645340"
+                           target="_blank"
+                           class="btn btn-whatsapp">
+                            💬 Agendar pelo WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MAPA -->
+            <div class="localizacao-mapa">
+                <iframe 
+                    src="https://www.google.com/maps?q=Av+do+Contorno+Parnaiba+PI&output=embed"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Mapa da Barbearia do Nonato">
+                </iframe>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <!-- DEPOIMENTOS (extra) -->
+    <section class="section depoimentos-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">O que dizem</span>
+                <h2 class="section-title">Depoimentos <span class="gold-text">Reais</span></h2>
+            <div class="depoimentos-slider">
+                <div class="depoimento-card">
+                    <div class="quote">"</div>
+                    <p class="depoimento-text">Melhor barbearia de Parnaíba! O Nonato é mestre no que faz. Ambiente aconchegante e atendimento impecável.</p>
+                    <div class="cliente">
+                        <div class="cliente-info">
+                            <h4>Carlos Eduardo</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="quote">"</div>
+                    <p class="depoimento-text">Já sou cliente há 5 anos. Não troco por nada! A barbearia do Nonato é referência em qualidade e tradição.</p>
+                    <div class="cliente">
+                        <div class="cliente-info">
+                            <h4>Rafael Mendes</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="quote">"</div>
+                    <p class="depoimento-text">Atendimento diferenciado, produtos de qualidade e um café delicioso enquanto espero. Recomendo!</p>
+                    <div class="cliente">
+                        <div class="cliente-info">
+                            <h4>Juliano Costa</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/5586994645340?text=Olá! Gostaria de agendar um horário na Barbearia do Nonato." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Contato via WhatsApp">
+        <div class="whatsapp-pulse"></div>
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+        <span class="whatsapp-tooltip">Fale conosco</span>
+    </a>
+
+    <!-- FOOTER PREMIUM -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-logo">NONATO<span>💈</span></h3>
+                    <p>Desde 2012 elevando o padrão de barbearias em Parnaíba. Tradição, estilo e sofisticação em cada corte.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.99h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.99C18.343 21.128 22 16.991 22 12z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 015.2-1.74V9.3a7.89 7.89 0 004.22 1.27v-3.5a4.5 4.5 0 01-1-.13" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#agendamento">Agendar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📞 (86) 99464-5340</li>
+                        <li>✉️ contato@barbeariadononato.com</li>
+                        <li>📍 Av. 19 de Outubro, 1234</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Barbearia do Nonato. Todos os direitos reservados.</p>
+                <p>Desenvolvido com <span class="heart">❤️</span> e <span class="gold-text">ouro</span> em Parnaíba</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX PARA GALERIA -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
