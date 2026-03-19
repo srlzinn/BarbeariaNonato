@@ -291,26 +291,25 @@
         </div>
     </section>
 
-    <!-- AGENDAMENTO PREMIUM -->
+    <!-- AGENDAMENTO PREMIUM MELHORADO E FUNCIONAL -->
     <section id="agendamento" class="section agendamento-section">
         <div class="container">
             <div class="section-header centered">
                 <span class="section-tag">Reserve seu horário</span>
-                <h2 class="section-title">Agendamento <span class="gold-text">Exclusivo</span></h2>
-
+                <h2 class="section-title">Agende <span class="gold-text">Seu Horário</span></h2>
             </div>
             
             <div class="agendamento-wrapper">
                 <div class="agendamento-card">
                     <div class="card-bg-pattern"></div>
-                    <form id="agendamento-form" class="agendamento-form">
+                    <form id="agendamento-form" class="agendamento-form" autocomplete="on">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="servico">Serviço desejado *</label>
+                                <label for="servico">Serviço desejado <span style="color: #c9a44c">*</span></label>
                                 <div class="select-wrapper">
                                     <select id="servico" name="servico" required>
                                         <option value="" disabled selected>Selecione um serviço</option>
-                                        <option value="Corte masculino">Corte Masculino - R$ 45</option>
+                                        <option value="Corte Masculino">Corte Masculino - R$ 45</option>
                                         <option value="Barba">Barba - R$ 35</option>
                                         <option value="Corte + Barba">Corte + Barba - R$ 70</option>
                                         <option value="Acabamento">Acabamento - R$ 25</option>
@@ -320,14 +319,14 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="data">Data do agendamento *</label>
-                                <input type="date" id="data" name="data" required min="">
+                                <label for="data">Data do agendamento <span style="color: #c9a44c">*</span></label>
+                                <input type="date" id="data" name="data" required min="" autocomplete="on">
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="horario">Horário preferencial *</label>
+                                <label for="horario">Horário preferencial <span style="color: #c9a44c">*</span></label>
                                 <div class="select-wrapper">
                                     <select id="horario" name="horario" required>
                                         <option value="" disabled selected>Selecione um horário</option>
@@ -348,7 +347,8 @@
                             <div class="form-group">
                                 <label for="profissional">Profissional (opcional)</label>
                                 <div class="select-wrapper">
-                                    <select id="profissional">
+                                    <select id="profissional" name="profissional">
+                                        <option value="" selected>Qualquer Profissional</option>
                                         <option value="Nonato">Nonato (Mestre)</option>
                                         <option value="Junior">Junior (Especialista)</option>
                                         <option value="Marcos">Marcos (Designer)</option>
@@ -358,14 +358,25 @@
                             </div>
                         </div>
                         
+                        <div class="form-row">
+                            <div class="form-group" style="flex: 1 0 100%;">
+                                <label for="nome">Nome completo <span style="color: #c9a44c">*</span></label>
+                                <input type="text" id="nome" name="nome" required placeholder="Seu nome" autocomplete="name">
+                            </div>
+                            <div class="form-group" style="flex: 1 0 100%;">
+                                <label for="telefone">WhatsApp <span style="color: #c9a44c">*</span></label>
+                                <input type="tel" id="telefone" name="telefone" required placeholder="(DDD) 9XXXX-XXXX" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" autocomplete="tel">
+                            </div>
+                        </div>
+
                         <div class="form-checkbox">
                             <input type="checkbox" id="confirmar" checked disabled>
-                            <label for="confirmar">Ao agendar, você concorda com nossa política de cancelamento com 2h de antecedência</label>
+                            <label for="confirmar">Ao agendar, você concorda com nossa política de cancelamento com 2h de antecedência.</label>
                         </div>
                         
-                        <button type="button" id="agendar-whatsapp" class="btn btn-agendar">
+                        <button type="submit" id="agendar-whatsapp" class="btn btn-agendar">
                             <span>Agendar via WhatsApp</span>
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="" class="btn-whatsapp-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Ícone do WhatsApp" class="btn-whatsapp-icon">
                         </button>
                     </form>
                     
@@ -374,7 +385,7 @@
                             <span class="info-icon">📞</span>
                             <div>
                                 <h4>Atendimento</h4>
-                                <p>Terça a Sábado, 9h às 19h</p>
+                                <p>Terça a Sábado, 09:00 às 19:00</p>
                             </div>
                         </div>
                         <div class="info-item">
