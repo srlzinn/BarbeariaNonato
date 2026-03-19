@@ -583,79 +583,154 @@
         </div>
     </section>
 
-<!-- LOCALIZAÇÃO COM MAPA INTERATIVO -->
+<!-- LOCALIZAÇÃO COM MAPA INTERATIVO MELHORADA -->
 <section id="localizacao" class="section localizacao-section">
     <div class="container">
 
-        <div class="section-header">
-            <span class="section-tag">Onde nos encontrar</span>
-            <h2 class="section-title">
-                Localização <span class="gold-text">Estratégica</span>
+        <div class="section-header centered">
+            <span class="section-tag" style="color: var(--gold); font-size: 1.1em; letter-spacing: 1px;">Onde Estamos</span>
+            <h2 class="section-title" style="font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 2.1em; color: var(--white); margin-top: 10px; margin-bottom: 10px;">
+                Nosso <span class="gold-text" style="font-weight: 900; font-style: italic;">Endereço</span>
             </h2>
+            <p class="lead" style="margin-top: 2px; font-size: 1.03em; color: var(--gray-text); letter-spacing: 0.03em;">
+                Venha nos visitar e viva a experiência premium da Barbearia do Nonato.
+            </p>
         </div>
 
         <div class="localizacao-grid">
 
             <!-- INFO -->
             <div class="localizacao-info">
-                <div class="info-card">
-                    
-                    <h3>Barbearia do Nonato</h3>
+                <div class="info-card"
+                    style="box-shadow: var(--shadow-md); border-radius: 15px; background: var(--medium-gray); padding: 28px 22px;">
 
-                    <p class="endereco-destaque">Av. do Contorno</p>
-                    <p class="bairro">Bairro Projetado - Parnaíba/PI</p>
-                    <p class="cep">Código: 37MC+R5</p>
+                    <h3 style="color: var(--gold); font-size: 1.6em; font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; font-weight: 700; margin-bottom: 13px; display: flex; align-items: center; gap: 7px;">
+                        <span style="font-size: 1.3em;">✂️</span> Barbearia do Nonato
+                    </h3>
 
-                    <div class="info-details">
-                        <div class="detail">
-                            <span class="detail-icon">📞</span>
-                            <span>(86) 99464-5340</span>
+                    <div style="margin-bottom: 10px;">
+                        <p class="endereco-destaque" style="font-size: 1.18em; font-weight: 700; color: var(--white); margin-bottom: 2px; letter-spacing: 0.02em;">
+                            Av. do Contorno, Bairro Projetado
+                        </p>
+                        <p class="bairro" style="color: var(--gray-text); margin-bottom: 0; font-size: 1em;">Parnaíba - PI</p>
+                        <p class="cep" style="color: var(--gold); margin-bottom: 6px; font-size: 0.98em;">Plus Code: <b>37MC+R5</b></p>
+                    </div>
+
+                    <div class="info-details" style="margin: 16px 0 18px 0; display: flex; flex-direction: column; gap: 5px;">
+                        <div class="detail" style="font-size: 1.07em; display: flex; align-items: center; gap: 6px;">
+                            <span class="detail-icon" aria-label="Telefone" style="color: var(--gold);">📞</span>
+                            <a href="tel:+5586994645340"
+                               style="color: var(--off-white); text-decoration: none; font-weight: 600; font-family: inherit; letter-spacing: 0.01em;">
+                               (86) 99464-5340
+                            </a>
                         </div>
-                        <div class="detail">
-                            <span class="detail-icon">✉️</span>
-                            <span>contato@barbeariadononato.com</span>
+                        <div class="detail" style="font-size: 1.07em; display: flex; align-items: center; gap: 6px;">
+                            <span class="detail-icon" aria-label="E-mail" style="color: var(--gold);">✉️</span>
+                            <a href="mailto:contato@barbeariadononato.com"
+                               style="color: var(--off-white); text-decoration: none; font-family: inherit;">
+                               contato@barbeariadononato.com
+                            </a>
                         </div>
                     </div>
 
-                    <div class="horarios">
-                        <h4>Horário de funcionamento</h4>
-                        <ul>
-                            <li><span>Segunda a Sabado:</span> 09:00 - 19:00</li>
-                            <li><span>Sábado:</span> 09:00 - 17:00</li>
-                            <li><span>Domingo:</span> Fechado</li>
+                    <div class="horarios" style="margin-bottom: 14px;">
+                        <h4 style="color: var(--gold); font-size: 1.05em; font-weight: 700; margin-bottom: 5px; font-family: inherit;">
+                            Horário de Funcionamento
+                        </h4>
+                        <ul style="list-style: none; padding: 0; color: var(--white); font-size: 1em;">
+                            <li>
+                                <span style="color: var(--gold-dark); font-weight: bold;">Segunda a Sexta:</span>
+                                09:00 – 19:00
+                            </li>
+                            <li>
+                                <span style="color: var(--gold-dark); font-weight: bold;">Sábado:</span>
+                                09:00 – 17:00
+                            </li>
+                            <li>
+                                <span style="color: var(--gold-dark); font-weight: bold;">Domingo:</span>
+                                Fechado
+                            </li>
                         </ul>
                     </div>
 
                     <!-- BOTÕES -->
-                    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
-
-                        <a href="https://www.google.com/maps/search/?api=1&query=Av+do+Contorno+Parnaiba+PI"
-                           target="_blank"
-                           class="btn btn-mapa">
-                            📍 Abrir no Google Maps
+                    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Av+do+Contorno+Parnaiba+PI"
+                            target="_blank"
+                            class="btn btn-mapa"
+                            style="
+                                background: var(--gradient-gold);
+                                color: var(--black);
+                                border: none;
+                                border-radius: 30px;
+                                font-size: 1.09em;
+                                font-family: 'Rajdhani', sans-serif;
+                                font-weight: bold;
+                                padding: 13px 0;
+                                box-shadow: var(--shadow-gold);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 10px;
+                                transition: filter 0.2s, box-shadow 0.2s;
+                                filter: brightness(1.05);
+                                letter-spacing: 0.03em;
+                                text-shadow: none;
+                                text-decoration: none;
+                            "
+                            onmouseover="this.style.boxShadow='var(--shadow-gold-hover)';"
+                            onmouseout="this.style.boxShadow='var(--shadow-gold)';"
+                        >
+                            <svg width="20" height="20" fill="none" style="display:inline; vertical-align:middle;" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 5a5 5 0 015 5c0 3.33-4.167 7.5-5 7.5S5 13.33 5 10a5 5 0 015-5Zm0 2.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5Z" fill="currentColor"/></svg>
+                            <span>Abrir no Google Maps</span>
                         </a>
 
-                        <a href="https://wa.me/5586994645340"
-                           target="_blank"
-                           class="btn btn-whatsapp">
-                            💬 Agendar pelo WhatsApp
+                        <a
+                            href="https://wa.me/5586994645340?text=Olá! Gostaria de saber mais sobre a localização da barbearia."
+                            target="_blank"
+                            class="btn btn-whatsapp"
+                            style="
+                                background: #25D366;
+                                color: #fff;
+                                border: none;
+                                border-radius: 30px;
+                                font-size: 1.07em;
+                                font-family: 'Rajdhani', sans-serif;
+                                font-weight: bold;
+                                padding: 13px 0;
+                                box-shadow: 0 3px 12px rgba(37,211,102,0.16);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 10px;
+                                transition: filter 0.2s, box-shadow 0.2s;
+                                text-decoration: none;
+                                letter-spacing: 0.02em;
+                            "
+                            onmouseover="this.style.filter='brightness(1.1)';"
+                            onmouseout="this.style.filter='brightness(1)';"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 32 32" style="display:inline; vertical-align:middle;" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g><path d="M16.001 2.997c-7.168 0-12.999 5.832-12.999 13.001 0 2.294.59 4.54 1.71 6.563l-2.236 6.482a1.001 1.001 0 0 0 1.273 1.274l6.483-2.237A12.879 12.879 0 0 0 16 28.001c7.169 0 13.002-5.832 13.002-13.001S23.17 2.997 16.001 2.997zm0 23.997a10.975 10.975 0 0 1-5.912-1.692.998.998 0 0 0-.751-.104l-5.483 1.894 1.892-5.483a.996.996 0 0 0-.104-.751A10.998 10.998 0 1 1 16.001 26.994zm6.217-8.435-.009-.008-1.723-.98a1.04 1.04 0 0 0-1.456.375l-.517.848a.997.997 0 0 1-1.251.458c-1.063-.421-2.091-1.523-2.495-2.235a.995.995 0 0 1 .116-1.148l.675-.693a1.042 1.042 0 0 0 .093-1.306c-.162-.244-.626-1.077-.861-1.48-.227-.395-.738-.999-1.487-1.015-.625-.014-1.383.383-1.673.9-.486.845-.452 1.79.109 2.83.144.265.661 1.577 1.927 2.859 2.486 2.511 3.668 2.376 4.322 2.234.431-.09.828-.507.949-.735.12-.23.12-.483.057-.61l-.555-.78a.999.999 0 0 1 .285-1.367z"/></g></svg>
+                            <span>Chamar no WhatsApp</span>
                         </a>
-
                     </div>
 
                 </div>
             </div>
 
-            <!-- MAPA -->
-            <div class="localizacao-mapa">
-                <iframe 
-                    src="https://www.google.com/maps?q=Av+do+Contorno+Parnaiba+PI&output=embed"
-                    width="100%" 
-                    height="100%" 
-                    style="border:0; border-radius: 12px;" 
-                    allowfullscreen="" 
+            <!-- MAPA INTERATIVO -->
+            <div class="localizacao-mapa"
+                style="min-height: 340px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <iframe
+                    src="https://www.google.com/maps?q=Av.+do+Contorno,+Parnaíba,+PI&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0; min-height:340px;"
+                    allowfullscreen=""
                     loading="lazy"
-                    title="Mapa da Barbearia do Nonato">
+                    title="Mapa da Barbearia do Nonato"
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
