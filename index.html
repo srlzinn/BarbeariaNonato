@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <!-- SEO Premium -->
+    <!-- SEO Premium + Dados Estruturados -->
     <title>Barbearia do Nonato | Experiência Premium em Parnaíba</title>
     <meta name="description" content="Desde 2012, a Barbearia do Nonato redefiniu o conceito de barbearia em Parnaíba. Experiência premium, cortes cinematográficos e atendimento de elite.">
     <meta name="keywords" content="barbearia luxo Parnaíba, corte masculino premium, barba designer, barbearia vintage, experiência grooming">
@@ -17,6 +17,37 @@
     <meta property="og:title" content="Barbearia do Nonato | Tradição e Sofisticação">
     <meta property="og:description" content="Experimente o melhor grooming de Parnaíba em um ambiente exclusivo.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80">
+    
+    <!-- Dados Estruturados (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Barbearia do Nonato",
+      "image": "https://images.unsplash.com/photo-1621605815971-fbc98d665033",
+      "description": "Barbearia premium em Parnaíba desde 2012. Cortes masculinos, barba, degradê e muito mais.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. do Contorno, Bairro Projetado",
+        "addressLocality": "Parnaíba",
+        "addressRegion": "PI",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-2.905",
+        "longitude": "-41.776"
+      },
+      "url": "https://barbeariadononato.com",
+      "telephone": "+5586994645340",
+      "priceRange": "R$5 - R$50",
+      "openingHours": ["Mo-Fr 09:00-19:00", "Sa 09:00-17:00"],
+      "sameAs": [
+        "https://www.instagram.com/barbeariadononato",
+        "https://www.facebook.com/barbeariadononato"
+      ]
+    }
+    </script>
     
     <!-- Favicon com animação -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='3.5' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c9a44c' filter='url(%23glow)'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%230a0a0a' font-weight='bold'%3E💈%3C/text%3E%3C/svg%3E">
@@ -45,7 +76,7 @@
             </a>
             
             <!-- Menu Desktop -->
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#hero" class="nav-link" data-text="Início">Início</a></li>
                 <li><a href="#sobre" class="nav-link" data-text="Sobre">Sobre</a></li>
                 <li><a href="#servicos" class="nav-link" data-text="Serviços">Serviços</a></li>
@@ -54,9 +85,8 @@
                 <li><a href="#localizacao" class="nav-link" data-text="Localização">Localização</a></li>
             </ul>
             
-
             <!-- Menu Hamburguer Premium -->
-            <div class="hamburger-premium">
+            <div class="hamburger-premium" id="hamburger" aria-label="Menu principal" aria-expanded="false">
                 <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
                 </div>
@@ -103,6 +133,7 @@
             <div class="section-header">
                 <span class="section-tag">Nossa História</span>
                 <h2 class="section-title">Tradição e <span class="gold-text">Excelência</span></h2>
+            </div>
             <div class="sobre-grid">
                 <div class="sobre-content">
                     <div class="sobre-text">
@@ -138,11 +169,11 @@
                 
                 <div class="sobre-stats">
                     <div class="stat-card">
-                        <div class="stat-number" data-count="6">0</div>
+                        <div class="stat-number" data-count="14">0</div>
                         <div class="stat-label">Anos de História</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-count="1500">0</div>
+                        <div class="stat-number" data-count="15800">0</div>
                         <div class="stat-label">Cortes Realizados</div>
                     </div>
                     <div class="stat-card">
@@ -167,7 +198,7 @@
                     <div class="card-badge">Social</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Masculino Social">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Masculino Social" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Corte Masculino Social</h3>
@@ -183,7 +214,7 @@
                     <div class="card-badge">Barba</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Barba">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Barba" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Barba</h3>
@@ -199,7 +230,7 @@
                     <div class="card-badge">Degradê</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Degradê">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Degradê" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Corte Degradê</h3>
@@ -215,7 +246,7 @@
                     <div class="card-badge">Degradê Navalhado</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Degradê Navalhado">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Degradê Navalhado" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Degradê Navalhado</h3>
@@ -231,7 +262,7 @@
                     <div class="card-badge">Combo</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cabelo + Barba">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cabelo + Barba" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Cabelo + Barba</h3>
@@ -247,7 +278,7 @@
                     <div class="card-badge">Americano</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Americano">
+                        <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Americano" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Corte Americano</h3>
@@ -263,7 +294,7 @@
                     <div class="card-badge">Low Fade</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1540553016722-983aa48d5300?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Low Fade">
+                        <img src="https://images.unsplash.com/photo-1540553016722-983aa48d5300?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte Low Fade" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Corte Low Fade</h3>
@@ -279,7 +310,7 @@
                     <div class="card-badge">Corte do Jaca</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1600897681863-7703c557a3b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte do Jaca">
+                        <img src="https://images.unsplash.com/photo-1600897681863-7703c557a3b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte do Jaca" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Corte do Jaca</h3>
@@ -295,7 +326,7 @@
                     <div class="card-badge">Cavanhaque</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cavanhaque">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cavanhaque" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Cavanhaque</h3>
@@ -311,7 +342,7 @@
                     <div class="card-badge">Sobrancelha</div>
                     <div class="card-image">
                         <div class="image-glow"></div>
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sobrancelha">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sobrancelha" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Sobrancelha</h3>
@@ -323,18 +354,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- FREESTYLE - destaque com exemplos visuais -->
                 <div class="servico-card" data-tilt>
                     <div class="card-badge">Freestyle</div>
-                    <div class="card-image freestyle-slider">
+                    <div class="card-image">
                         <div class="image-glow"></div>
-                        <!-- Exemplo visual de freestyle usando múltiplas imagens -->
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Freestyle Design 1">
-                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Freestyle Design 2" style="margin-left: 10px;">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Freestyle Design" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Freestyle</h3>
-                        <p>Riscos e desenhos personalizados na máquina ou navalha. Veja exemplos acima e escolha seu estilo.</p>
+                        <p>Riscos e desenhos personalizados na máquina ou navalha.</p>
                         <div class="card-footer">
                             <span class="price">R$ 10</span>
                             <span class="time">⏱️ 10min</span>
@@ -346,150 +374,135 @@
         </div>
     </section>
 
-   <!-- GALERIA COM 12 FOTOS - TODAS DO MESMO TAMANHO -->
-<section id="galeria" class="section galeria-section">
-    <div class="container">
-        <div class="section-header centered">
-            <span class="section-tag">Portfólio</span>
-            <h2 class="section-title">Nossa <span class="gold-text">Arte</span></h2>
+    <!-- GALERIA COM FILTROS -->
+    <section id="galeria" class="section galeria-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Portfólio</span>
+                <h2 class="section-title">Nossa <span class="gold-text">Arte</span></h2>
+            </div>
+            
+            <!-- Filtros da Galeria -->
+            <div class="galeria-filtros">
+                <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="corte">Cortes</button>
+                <button class="filtro-btn" data-filtro="fade">Fades</button>
+                <button class="filtro-btn" data-filtro="barba">Barba</button>
+                <button class="filtro-btn" data-filtro="estilo">Estilos</button>
+            </div>
+            
+            <div class="galeria-grid" id="galeriaGrid">
+                <div class="galeria-item" data-categoria="fade">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=600&fit=crop&q=80" alt="Fade Americano" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Fade Americano</h4>
+                            <p>Degradê versátil e popular</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="fade">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&fit=crop&q=80" alt="Mid Fade" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Mid Fade</h4>
+                            <p>Degradê médio, equilibrado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="corte">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=600&fit=crop&q=80" alt="Undercut Moderno" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Undercut Moderno</h4>
+                            <p>Laterais raspadas, volume no topo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="fade">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=600&fit=crop&q=80" alt="Buzz Cut com Degradê" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Buzz Cut</h4>
+                            <p>Estilo militar com fade</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="estilo">
+                    <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?w=600&h=600&fit=crop&q=80" alt="Pompadour" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Pompadour</h4>
+                            <p>Topete volumoso</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="corte">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop&q=80" alt="Crop Top" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Crop Top</h4>
+                            <p>Topo curto com franja reta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="estilo">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983aa48d5300?w=600&h=600&fit=crop&q=80" alt="Quiff Moderno" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Quiff Moderno</h4>
+                            <p>Topete alto despojado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="estilo">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=600&fit=crop&q=80" alt="Slicked Back" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Slicked Back</h4>
+                            <p>Penteado para trás</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="corte">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=600&fit=crop&q=80" alt="Textured Fringe" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Franja Texturizada</h4>
+                            <p>Franja desfiada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="corte">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&h=600&fit=crop&q=80" alt="Caesar Cut" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Caesar Cut</h4>
+                            <p>Franja curta e reta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="fade">
+                    <img src="https://images.unsplash.com/photo-1605493625529-3b6c2d3e9d9b?w=600&h=600&fit=crop&q=80" alt="Bald Fade" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Bald Fade</h4>
+                            <p>Degradê até a pele</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="galeria-item" data-categoria="estilo">
+                    <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&h=600&fit=crop&q=80" alt="Mullet Moderno" loading="lazy">
+                    <div class="galeria-overlay">
+                        <div class="overlay-content">
+                            <h4>Mullet Moderno</h4>
+                            <p>Parte traseira longa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="galeria-grid">
-            
-            <!-- 1. Fade Americano -->
-            <div class="galeria-item" data-index="0">
-                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=600&fit=crop&q=80" alt="Fade Americano">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Fade Americano</h4>
-                        <p>Degradê versátil e popular</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 2. Mid Fade -->
-            <div class="galeria-item" data-index="1">
-                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&fit=crop&q=80" alt="Mid Fade">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Mid Fade</h4>
-                        <p>Degradê médio, equilibrado</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 3. Undercut Moderno -->
-            <div class="galeria-item" data-index="2">
-                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=600&fit=crop&q=80" alt="Undercut Moderno">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Undercut Moderno</h4>
-                        <p>Laterais raspadas, volume no topo</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 4. Buzz Cut com Degradê -->
-            <div class="galeria-item" data-index="3">
-                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=600&fit=crop&q=80" alt="Buzz Cut com Degradê">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Buzz Cut</h4>
-                        <p>Estilo militar com fade</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 5. Pompadour Contemporâneo -->
-            <div class="galeria-item" data-index="4">
-                <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?w=600&h=600&fit=crop&q=80" alt="Pompadour">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Pompadour</h4>
-                        <p>Topete volumoso</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 6. Crop Top (Corte Safra) -->
-            <div class="galeria-item" data-index="5">
-                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop&q=80" alt="Crop Top">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Crop Top</h4>
-                        <p>Topo curto com franja reta</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 7. Quiff Moderno -->
-            <div class="galeria-item" data-index="6">
-                <img src="https://images.unsplash.com/photo-1540553016722-983aa48d5300?w=600&h=600&fit=crop&q=80" alt="Quiff Moderno">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Quiff Moderno [citation:3]</h4>
-                        <p>Topete alto despojado</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 8. Slicked Back -->
-            <div class="galeria-item" data-index="7">
-                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=600&fit=crop&q=80" alt="Slicked Back">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Slicked Back</h4>
-                        <p>Penteado para trás</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 9. Textured Fringe -->
-            <div class="galeria-item" data-index="8">
-                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=600&fit=crop&q=80" alt="Textured Fringe">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Franja Texturizada [citation:4]</h4>
-                        <p>Franja desfiada</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 10. Caesar Cut Moderno -->
-            <div class="galeria-item" data-index="9">
-                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&h=600&fit=crop&q=80" alt="Caesar Cut">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Caesar Cut</h4>
-                        <p>Franja curta e reta</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 11. Bald Fade -->
-            <div class="galeria-item" data-index="10">
-                <img src="https://images.unsplash.com/photo-1605493625529-3b6c2d3e9d9b?w=600&h=600&fit=crop&q=80" alt="Bald Fade">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Bald Fade</h4>
-                        <p>Degradê até a pele</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 12. Mullet Moderno -->
-            <div class="galeria-item" data-index="11">
-                <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&h=600&fit=crop&q=80" alt="Mullet Moderno">
-                <div class="galeria-overlay">
-                    <div class="overlay-content">
-                        <h4>Mullet Moderno [citation:5][citation:8]</h4>
-                        <p>Parte traseira longa</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- AGENDAMENTO PREMIUM MELHORADO E FUNCIONAL -->
     <section id="agendamento" class="section agendamento-section">
@@ -505,28 +518,35 @@
                     <form id="agendamento-form" class="agendamento-form" autocomplete="on">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="servico">Serviço desejado <span style="color: #c9a44c">*</span></label>
+                                <label for="servico">Serviço desejado <span class="required-star">*</span></label>
                                 <div class="select-wrapper">
                                     <select id="servico" name="servico" required>
                                         <option value="" disabled selected>Selecione um serviço</option>
-                                        <option value="Corte Masculino">Corte Masculino - R$ 45</option>
-                                        <option value="Barba">Barba - R$ 35</option>
-                                        <option value="Corte + Barba">Corte + Barba - R$ 70</option>
-                                        <option value="Acabamento">Acabamento - R$ 25</option>
+                                        <option value="Corte Masculino Social - R$ 25">Corte Masculino Social - R$ 25</option>
+                                        <option value="Barba - R$ 25">Barba - R$ 25</option>
+                                        <option value="Corte Degradê - R$ 25">Corte Degradê - R$ 25</option>
+                                        <option value="Degradê Navalhado - R$ 30">Degradê Navalhado - R$ 30</option>
+                                        <option value="Cabelo + Barba (Combo) - R$ 50">Cabelo + Barba (Combo) - R$ 50</option>
+                                        <option value="Corte Americano - R$ 30">Corte Americano - R$ 30</option>
+                                        <option value="Corte Low Fade - R$ 30">Corte Low Fade - R$ 30</option>
+                                        <option value="Corte do Jaca - R$ 30">Corte do Jaca - R$ 30</option>
+                                        <option value="Cavanhaque - R$ 10">Cavanhaque - R$ 10</option>
+                                        <option value="Sobrancelha - R$ 5">Sobrancelha - R$ 5</option>
+                                        <option value="Freestyle - R$ 10">Freestyle - R$ 10</option>
                                     </select>
                                     <span class="select-arrow">▼</span>
                                 </div>
                             </div>
                             
                             <div class="form-group">
-                                <label for="data">Data do agendamento <span style="color: #c9a44c">*</span></label>
-                                <input type="date" id="data" name="data" required min="" autocomplete="on">
+                                <label for="data">Data do agendamento <span class="required-star">*</span></label>
+                                <input type="date" id="data" name="data" required min="">
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="horario">Horário preferencial <span style="color: #c9a44c">*</span></label>
+                                <label for="horario">Horário preferencial <span class="required-star">*</span></label>
                                 <div class="select-wrapper">
                                     <select id="horario" name="horario" required>
                                         <option value="" disabled selected>Selecione um horário</option>
@@ -542,16 +562,18 @@
                                     </select>
                                     <span class="select-arrow">▼</span>
                                 </div>
+                                <small class="form-hint">⏰ Horário de almoço: 12:00 às 14:00</small>
                             </div>
                             
                             <div class="form-group">
-                                <label for="profissional">Profissional (opcional)</label>
+                                <label for="profissional">Profissional <span class="required-star">*</span></label>
                                 <div class="select-wrapper">
-                                    <select id="profissional" name="profissional">
-                                        <option value="" selected>Qualquer Profissional</option>
-                                        <option value="Nonato">Nonato (Mestre)</option>
-                                        <option value="Junior">Junior (Especialista)</option>
-                                        <option value="Marcos">Marcos (Designer)</option>
+                                    <select id="profissional" name="profissional" required>
+                                        <option value="" disabled selected>Selecione um profissional</option>
+                                        <option value="nonato">Nonato (Mestre - Especialista em Barba)</option>
+                                        <option value="junior">Junior (Especialista em Degradê)</option>
+                                        <option value="paulinho">Paulinho (Especialista em Fade)</option>
+                                        <option value="irmao">Irmão (Especialista em Cortes Clássicos)</option>
                                     </select>
                                     <span class="select-arrow">▼</span>
                                 </div>
@@ -559,18 +581,28 @@
                         </div>
                         
                         <div class="form-row">
-                            <div class="form-group" style="flex: 1 0 100%;">
-                                <label for="nome">Nome completo <span style="color: #c9a44c">*</span></label>
-                                <input type="text" id="nome" name="nome" required placeholder="Seu nome" autocomplete="name">
+                            <div class="form-group">
+                                <label for="nome">Nome completo <span class="required-star">*</span></label>
+                                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" autocomplete="name">
+                                <div class="error-message" id="nome-error"></div>
                             </div>
-                            <div class="form-group" style="flex: 1 0 100%;">
-                                <label for="telefone">WhatsApp <span style="color: #c9a44c">*</span></label>
-                                <input type="tel" id="telefone" name="telefone" required placeholder="(DDD) 9XXXX-XXXX" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" autocomplete="tel">
+                            <div class="form-group">
+                                <label for="telefone">WhatsApp <span class="required-star">*</span></label>
+                                <input type="tel" id="telefone" name="telefone" required placeholder="(86) 9XXXX-XXXX" autocomplete="tel">
+                                <div class="error-message" id="telefone-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="politica" required>
+                                <label for="politica">Li e aceito a <a href="#" id="politica-agendamento" class="politica-link">Política de Agendamento</a> <span class="required-star">*</span></label>
                             </div>
                         </div>
                         
                         <button type="submit" id="agendar-whatsapp" class="btn btn-agendar">
-                            <span>Agendar via WhatsApp</span>
+                            <span id="btn-text">Agendar via WhatsApp</span>
+                            <div class="btn-spinner" style="display: none;"></div>
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Ícone do WhatsApp" class="btn-whatsapp-icon">
                         </button>
                     </form>
@@ -587,14 +619,14 @@
                             <span class="info-icon">⏰</span>
                             <div>
                                 <h4>Duração média</h4>
-                                <p>40 a 70 minutos por serviço</p>
+                                <p>30 a 60 minutos por serviço</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <span class="info-icon">📍</span>
                             <div>
                                 <h4>Localização</h4>
-                                <p>Av. 19 de Outubro - Centro</p>
+                                <p>Av. do Contorno - Centro</p>
                             </div>
                         </div>
                     </div>
@@ -603,167 +635,97 @@
         </div>
     </section>
 
-<!-- LOCALIZAÇÃO COM MAPA INTERATIVO MELHORADA -->
-<section id="localizacao" class="section localizacao-section">
-    <div class="container">
-
-        <div class="section-header centered">
-            <span class="section-tag" style="color: var(--gold); font-size: 1.1em; letter-spacing: 1px;">Onde Estamos</span>
-            <h2 class="section-title" style="font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 2.1em; color: var(--white); margin-top: 10px; margin-bottom: 10px;">
-                Nosso <span class="gold-text" style="font-weight: 900; font-style: italic;">Endereço</span>
-            </h2>
-            <p class="lead" style="margin-top: 2px; font-size: 1.03em; color: var(--gray-text); letter-spacing: 0.03em;">
-                Venha nos visitar e viva a experiência premium da Barbearia do Nonato.
-            </p>
+    <!-- MODAL DE POLÍTICA DE AGENDAMENTO -->
+    <div id="modal-politica-agendamento" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Política de Agendamento</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>📌 Cancelamentos e Reagendamentos</h4>
+                <p>Cancelamentos ou reagendamentos devem ser feitos com <strong>no mínimo 2 horas de antecedência</strong>. Após esse período, o horário será considerado como falta.</p>
+                
+                <h4>⏰ Atrasos</h4>
+                <p>O cliente terá uma tolerância de <strong>15 minutos de atraso</strong>. Após esse tempo, o horário será automaticamente cancelado e disponibilizado para outro cliente.</p>
+                
+                <h4>💳 Formas de Pagamento</h4>
+                <p>Aceitamos: Dinheiro, PIX, Cartões de Crédito e Débito (Visa, Mastercard, Elo).</p>
+                
+                <h4>📱 Confirmação</h4>
+                <p>O agendamento será confirmado via WhatsApp. Em caso de não confirmação em até 1 hora, o horário poderá ser cancelado.</p>
+                
+                <h4>✨ Nosso Compromisso</h4>
+                <p>Garantimos pontualidade, qualidade e uma experiência premium em cada atendimento.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-close-btn">Entendi</button>
+            </div>
         </div>
+    </div>
 
-        <div class="localizacao-grid">
+    <!-- LOCALIZAÇÃO COM MAPA INTERATIVO -->
+    <section id="localizacao" class="section localizacao-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Onde Estamos</span>
+                <h2 class="section-title">Nosso <span class="gold-text">Endereço</span></h2>
+                <p class="lead">Venha nos visitar e viva a experiência premium da Barbearia do Nonato.</p>
+            </div>
 
-            <!-- INFO -->
-            <div class="localizacao-info">
-                <div class="info-card"
-                    style="box-shadow: var(--shadow-md); border-radius: 15px; background: var(--medium-gray); padding: 28px 22px;">
-
-                    <h3 style="color: var(--gold); font-size: 1.6em; font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; font-weight: 700; margin-bottom: 13px; display: flex; align-items: center; gap: 7px;">
-                        <span style="font-size: 1.3em;">✂️</span> Barbearia do Nonato
-                    </h3>
-
-                    <div style="margin-bottom: 10px;">
-                        <p class="endereco-destaque" style="font-size: 1.18em; font-weight: 700; color: var(--white); margin-bottom: 2px; letter-spacing: 0.02em;">
-                            Av. do Contorno, Bairro Projetado
-                        </p>
-                        <p class="bairro" style="color: var(--gray-text); margin-bottom: 0; font-size: 1em;">Parnaíba - PI</p>
-                        <p class="cep" style="color: var(--gold); margin-bottom: 6px; font-size: 0.98em;">Plus Code: <b>37MC+R5</b></p>
-                    </div>
-
-                    <div class="info-details" style="margin: 16px 0 18px 0; display: flex; flex-direction: column; gap: 5px;">
-                        <div class="detail" style="font-size: 1.07em; display: flex; align-items: center; gap: 6px;">
-                            <span class="detail-icon" aria-label="Telefone" style="color: var(--gold);">📞</span>
-                            <a href="tel:+5586994645340"
-                               style="color: var(--off-white); text-decoration: none; font-weight: 600; font-family: inherit; letter-spacing: 0.01em;">
-                               (86) 99464-5340
+            <div class="localizacao-grid">
+                <div class="localizacao-info">
+                    <div class="info-card">
+                        <h3>✂️ Barbearia do Nonato</h3>
+                        <div>
+                            <p class="endereco-destaque">Av. do Contorno, Bairro Projetado</p>
+                            <p class="bairro">Parnaíba - PI</p>
+                            <p class="cep">CEP: 64200-000</p>
+                        </div>
+                        <div class="info-details">
+                            <div class="detail">
+                                <span class="detail-icon">📞</span>
+                                <a href="tel:+5586994645340">(86) 99464-5340</a>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-icon">✉️</span>
+                                <a href="mailto:contato@barbeariadononato.com">contato@barbeariadononato.com</a>
+                            </div>
+                        </div>
+                        <div class="horarios">
+                            <h4>Horário de Funcionamento</h4>
+                            <ul>
+                                <li><span>Segunda a Sexta:</span> 09:00 – 19:00</li>
+                                <li><span>Sábado:</span> 09:00 – 17:00</li>
+                                <li><span>Domingo:</span> Fechado</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Av+do+Contorno+Parnaiba+PI" target="_blank" class="btn btn-mapa">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 5a5 5 0 015 5c0 3.33-4.167 7.5-5 7.5S5 13.33 5 10a5 5 0 015-5Zm0 2.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5Z" fill="currentColor"/></svg>
+                                <span>Abrir no Google Maps</span>
+                            </a>
+                            <a href="https://wa.me/5586994645340?text=Olá! Gostaria de saber mais sobre a localização da barbearia." target="_blank" class="btn btn-whatsapp" style="margin-top: 10px; background: #25D366; color: #fff;">
+                                <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 2.997c-7.168 0-12.999 5.832-12.999 13.001 0 2.294.59 4.54 1.71 6.563l-2.236 6.482a1.001 1.001 0 0 0 1.273 1.274l6.483-2.237A12.879 12.879 0 0 0 16 28.001c7.169 0 13.002-5.832 13.002-13.001S23.17 2.997 16.001 2.997zm0 23.997a10.975 10.975 0 0 1-5.912-1.692.998.998 0 0 0-.751-.104l-5.483 1.894 1.892-5.483a.996.996 0 0 0-.104-.751A10.998 10.998 0 1 1 16.001 26.994zm6.217-8.435-.009-.008-1.723-.98a1.04 1.04 0 0 0-1.456.375l-.517.848a.997.997 0 0 1-1.251.458c-1.063-.421-2.091-1.523-2.495-2.235a.995.995 0 0 1 .116-1.148l.675-.693a1.042 1.042 0 0 0 .093-1.306c-.162-.244-.626-1.077-.861-1.48-.227-.395-.738-.999-1.487-1.015-.625-.014-1.383.383-1.673.9-.486.845-.452 1.79.109 2.83.144.265.661 1.577 1.927 2.859 2.486 2.511 3.668 2.376 4.322 2.234.431-.09.828-.507.949-.735.12-.23.12-.483.057-.61l-.555-.78a.999.999 0 0 1 .285-1.367z"/></svg>
+                                <span>Chamar no WhatsApp</span>
                             </a>
                         </div>
-                        <div class="detail" style="font-size: 1.07em; display: flex; align-items: center; gap: 6px;">
-                            <span class="detail-icon" aria-label="E-mail" style="color: var(--gold);">✉️</span>
-                            <a href="mailto:contato@barbeariadononato.com"
-                               style="color: var(--off-white); text-decoration: none; font-family: inherit;">
-                               contato@barbeariadononato.com
-                            </a>
-                        </div>
                     </div>
-
-                    <div class="horarios" style="margin-bottom: 14px;">
-                        <h4 style="color: var(--gold); font-size: 1.05em; font-weight: 700; margin-bottom: 5px; font-family: inherit;">
-                            Horário de Funcionamento
-                        </h4>
-                        <ul style="list-style: none; padding: 0; color: var(--white); font-size: 1em;">
-                            <li>
-                                <span style="color: var(--gold-dark); font-weight: bold;">Segunda a Sexta:</span>
-                                09:00 – 19:00
-                            </li>
-                            <li>
-                                <span style="color: var(--gold-dark); font-weight: bold;">Sábado:</span>
-                                09:00 – 17:00
-                            </li>
-                            <li>
-                                <span style="color: var(--gold-dark); font-weight: bold;">Domingo:</span>
-                                Fechado
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- BOTÕES -->
-                    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&query=Av+do+Contorno+Parnaiba+PI"
-                            target="_blank"
-                            class="btn btn-mapa"
-                            style="
-                                background: var(--gradient-gold);
-                                color: var(--black);
-                                border: none;
-                                border-radius: 30px;
-                                font-size: 1.09em;
-                                font-family: 'Rajdhani', sans-serif;
-                                font-weight: bold;
-                                padding: 13px 0;
-                                box-shadow: var(--shadow-gold);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 10px;
-                                transition: filter 0.2s, box-shadow 0.2s;
-                                filter: brightness(1.05);
-                                letter-spacing: 0.03em;
-                                text-shadow: none;
-                                text-decoration: none;
-                            "
-                            onmouseover="this.style.boxShadow='var(--shadow-gold-hover)';"
-                            onmouseout="this.style.boxShadow='var(--shadow-gold)';"
-                        >
-                            <svg width="20" height="20" fill="none" style="display:inline; vertical-align:middle;" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 5a5 5 0 015 5c0 3.33-4.167 7.5-5 7.5S5 13.33 5 10a5 5 0 015-5Zm0 2.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5Z" fill="currentColor"/></svg>
-                            <span>Abrir no Google Maps</span>
-                        </a>
-
-                        <a
-                            href="https://wa.me/5586994645340?text=Olá! Gostaria de saber mais sobre a localização da barbearia."
-                            target="_blank"
-                            class="btn btn-whatsapp"
-                            style="
-                                background: #25D366;
-                                color: #fff;
-                                border: none;
-                                border-radius: 30px;
-                                font-size: 1.07em;
-                                font-family: 'Rajdhani', sans-serif;
-                                font-weight: bold;
-                                padding: 13px 0;
-                                box-shadow: 0 3px 12px rgba(37,211,102,0.16);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 10px;
-                                transition: filter 0.2s, box-shadow 0.2s;
-                                text-decoration: none;
-                                letter-spacing: 0.02em;
-                            "
-                            onmouseover="this.style.filter='brightness(1.1)';"
-                            onmouseout="this.style.filter='brightness(1)';"
-                        >
-                            <svg width="20" height="20" viewBox="0 0 32 32" style="display:inline; vertical-align:middle;" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g><path d="M16.001 2.997c-7.168 0-12.999 5.832-12.999 13.001 0 2.294.59 4.54 1.71 6.563l-2.236 6.482a1.001 1.001 0 0 0 1.273 1.274l6.483-2.237A12.879 12.879 0 0 0 16 28.001c7.169 0 13.002-5.832 13.002-13.001S23.17 2.997 16.001 2.997zm0 23.997a10.975 10.975 0 0 1-5.912-1.692.998.998 0 0 0-.751-.104l-5.483 1.894 1.892-5.483a.996.996 0 0 0-.104-.751A10.998 10.998 0 1 1 16.001 26.994zm6.217-8.435-.009-.008-1.723-.98a1.04 1.04 0 0 0-1.456.375l-.517.848a.997.997 0 0 1-1.251.458c-1.063-.421-2.091-1.523-2.495-2.235a.995.995 0 0 1 .116-1.148l.675-.693a1.042 1.042 0 0 0 .093-1.306c-.162-.244-.626-1.077-.861-1.48-.227-.395-.738-.999-1.487-1.015-.625-.014-1.383.383-1.673.9-.486.845-.452 1.79.109 2.83.144.265.661 1.577 1.927 2.859 2.486 2.511 3.668 2.376 4.322 2.234.431-.09.828-.507.949-.735.12-.23.12-.483.057-.61l-.555-.78a.999.999 0 0 1 .285-1.367z"/></g></svg>
-                            <span>Chamar no WhatsApp</span>
-                        </a>
-                    </div>
-
+                </div>
+                <div class="localizacao-mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.0!2d-41.776!3d-2.905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f0b0c0c0c0c0c1%3A0x0!2zMsKwNTQnMTguMCJTIDQxwrA0NiczNi4wIlc!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
-            <!-- MAPA INTERATIVO -->
-            <div class="localizacao-mapa"
-                style="min-height: 340px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md);">
-                <iframe
-                    src="https://www.google.com/maps?q=Av.+do+Contorno,+Parnaíba,+PI&z=17&output=embed"
-                    width="100%"
-                    height="100%"
-                    style="border:0; min-height:340px;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    title="Mapa da Barbearia do Nonato"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
         </div>
-
-    </div>
-</section>
-    <!-- DEPOIMENTOS (extra) -->
+    </section>
+    
+    <!-- DEPOIMENTOS -->
     <section class="section depoimentos-section">
         <div class="container">
             <div class="section-header centered">
                 <span class="section-tag">O que dizem</span>
                 <h2 class="section-title">Depoimentos <span class="gold-text">Reais</span></h2>
+            </div>
             <div class="depoimentos-slider">
                 <div class="depoimento-card">
                     <div class="quote">"</div>
@@ -842,6 +804,7 @@
                         <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#galeria">Galeria</a></li>
                         <li><a href="#agendamento">Agendar</a></li>
+                        <li><a href="#" id="politica-link-footer">Política de Agendamento</a></li>
                     </ul>
                 </div>
                 
@@ -850,7 +813,7 @@
                     <ul>
                         <li>📞 (86) 99464-5340</li>
                         <li>✉️ contato@barbeariadononato.com</li>
-                        <li>📍 Av. 19 de Outubro, 1234</li>
+                        <li>📍 Av. do Contorno, Parnaíba - PI</li>
                     </ul>
                 </div>
             </div>
