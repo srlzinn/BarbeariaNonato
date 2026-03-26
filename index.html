@@ -374,266 +374,187 @@
         </div>
     </section>
 
-    <!-- GALERIA COM FILTROS -->
-    <section id="galeria" class="section galeria-section">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">Portfólio</span>
-                <h2 class="section-title">Nossa <span class="gold-text">Arte</span></h2>
+   <!-- GALERIA COM FILTROS -->
+<section id="galeria" class="section galeria-section">
+    <div class="container">
+        <div class="section-header centered">
+            <span class="section-tag">Portfólio</span>
+            <h2 class="section-title">Nossa <span class="gold-text">Arte</span></h2>
+        </div>
+        
+        <div class="galeria-grid" id="galeriaGrid">
+            <!-- Imagem 1 - Corte -->
+            <div class="galeria-item" data-categoria="corte">
+                <img src="imagens/corte.jpeg" alt="Minha foto">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Corte Personalizado</h4>
+                        <p>Estilo único e exclusivo</p>
+                    </div>
+                </div>
             </div>
             
-            <!-- Filtros da Galeria -->
-            <div class="galeria-filtros">
-                <button class="filtro-btn active" data-filtro="todos">Todos</button>
-                <button class="filtro-btn" data-filtro="corte">Cortes</button>
-                <button class="filtro-btn" data-filtro="fade">Fades</button>
-                <button class="filtro-btn" data-filtro="barba">Barba</button>
-                <button class="filtro-btn" data-filtro="estilo">Estilos</button>
+            <!-- Imagem 2 - Fade -->
+            <div class="galeria-item" data-categoria="fade">
+                <img src="imagens/corte2.jpeg" alt="Fade Americano">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Fade Americano</h4>
+                        <p>Degradê versátil e popular</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="galeria-grid" id="galeriaGrid">
-                <div class="galeria-item" data-categoria="fade">
-                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=600&fit=crop&q=80" alt="Fade Americano" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Fade Americano</h4>
-                            <p>Degradê versátil e popular</p>
-                        </div>
+            <!-- Imagem 3 - Estilo -->
+            <div class="galeria-item" data-categoria="estilo">
+                <img src="imagens/corte3.jpeg" alt="Pompadour">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Pompadour</h4>
+                        <p>Topete volumoso</p>
                     </div>
                 </div>
-                <div class="galeria-item" data-categoria="fade">
-                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&fit=crop&q=80" alt="Mid Fade" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Mid Fade</h4>
-                            <p>Degradê médio, equilibrado</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="corte">
-                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=600&fit=crop&q=80" alt="Undercut Moderno" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Undercut Moderno</h4>
-                            <p>Laterais raspadas, volume no topo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="fade">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=600&fit=crop&q=80" alt="Buzz Cut com Degradê" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Buzz Cut</h4>
-                            <p>Estilo militar com fade</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="estilo">
-                    <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?w=600&h=600&fit=crop&q=80" alt="Pompadour" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Pompadour</h4>
-                            <p>Topete volumoso</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="corte">
-                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop&q=80" alt="Crop Top" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Crop Top</h4>
-                            <p>Topo curto com franja reta</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="estilo">
-                    <img src="https://images.unsplash.com/photo-1540553016722-983aa48d5300?w=600&h=600&fit=crop&q=80" alt="Quiff Moderno" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Quiff Moderno</h4>
-                            <p>Topete alto despojado</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="estilo">
-                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=600&fit=crop&q=80" alt="Slicked Back" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Slicked Back</h4>
-                            <p>Penteado para trás</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="corte">
-                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=600&fit=crop&q=80" alt="Textured Fringe" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Franja Texturizada</h4>
-                            <p>Franja desfiada</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="corte">
-                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&h=600&fit=crop&q=80" alt="Caesar Cut" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Caesar Cut</h4>
-                            <p>Franja curta e reta</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="fade">
-                    <img src="https://images.unsplash.com/photo-1605493625529-3b6c2d3e9d9b?w=600&h=600&fit=crop&q=80" alt="Bald Fade" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Bald Fade</h4>
-                            <p>Degradê até a pele</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="galeria-item" data-categoria="estilo">
-                    <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&h=600&fit=crop&q=80" alt="Mullet Moderno" loading="lazy">
-                    <div class="galeria-overlay">
-                        <div class="overlay-content">
-                            <h4>Mullet Moderno</h4>
-                            <p>Parte traseira longa</p>
-                        </div>
+            </div>
+            
+            <!-- Imagem 4 - Barba -->
+            <div class="galeria-item" data-categoria="barba">
+                <img src="imagens/corte4.jpeg" alt="Barba Estilizada">
+                <div class="galeria-overlay">
+                    <div class="overlay-content">
+                        <h4>Barba Estilizada</h4>
+                        <p>Design e acabamento perfeito</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- AGENDAMENTO PREMIUM MELHORADO E FUNCIONAL -->
-    <section id="agendamento" class="section agendamento-section">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">Reserve seu horário</span>
-                <h2 class="section-title">Agende <span class="gold-text">Seu Horário</span></h2>
-            </div>
-            
-            <div class="agendamento-wrapper">
-                <div class="agendamento-card">
-                    <div class="card-bg-pattern"></div>
-                    <form id="agendamento-form" class="agendamento-form" autocomplete="on">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="servico">Serviço desejado <span class="required-star">*</span></label>
-                                <div class="select-wrapper">
-                                    <select id="servico" name="servico" required>
-                                        <option value="" disabled selected>Selecione um serviço</option>
-                                        <option value="Corte Masculino Social - R$ 25">Corte Masculino Social - R$ 25</option>
-                                        <option value="Barba - R$ 25">Barba - R$ 25</option>
-                                        <option value="Corte Degradê - R$ 25">Corte Degradê - R$ 25</option>
-                                        <option value="Degradê Navalhado - R$ 30">Degradê Navalhado - R$ 30</option>
-                                        <option value="Cabelo + Barba (Combo) - R$ 50">Cabelo + Barba (Combo) - R$ 50</option>
-                                        <option value="Corte Americano - R$ 30">Corte Americano - R$ 30</option>
-                                        <option value="Corte Low Fade - R$ 30">Corte Low Fade - R$ 30</option>
-                                        <option value="Corte do Jaca - R$ 30">Corte do Jaca - R$ 30</option>
-                                        <option value="Cavanhaque - R$ 10">Cavanhaque - R$ 10</option>
-                                        <option value="Sobrancelha - R$ 5">Sobrancelha - R$ 5</option>
-                                        <option value="Freestyle - R$ 10">Freestyle - R$ 10</option>
-                                    </select>
-                                    <span class="select-arrow">▼</span>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="data">Data do agendamento <span class="required-star">*</span></label>
-                                <input type="date" id="data" name="data" required min="">
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="horario">Horário preferencial <span class="required-star">*</span></label>
-                                <div class="select-wrapper">
-                                    <select id="horario" name="horario" required>
-                                        <option value="" disabled selected>Selecione um horário</option>
-                                        <option value="09:00">09:00</option>
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="14:00">14:00</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="16:00">16:00</option>
-                                        <option value="17:00">17:00</option>
-                                        <option value="18:00">18:00</option>
-                                        <option value="19:00">19:00</option>
-                                    </select>
-                                    <span class="select-arrow">▼</span>
-                                </div>
-                                <small class="form-hint">⏰ Horário de almoço: 12:00 às 14:00</small>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="profissional">Profissional <span class="required-star">*</span></label>
-                                <div class="select-wrapper">
-                                    <select id="profissional" name="profissional" required>
-                                        <option value="" disabled selected>Selecione um profissional</option>
-                                        <option value="nonato">Nonato (Mestre - Especialista em Barba)</option>
-                                        <option value="junior">Junior (Especialista em Degradê)</option>
-                                        <option value="paulinho">Paulinho (Especialista em Fade)</option>
-                                        <option value="irmao">Irmão (Especialista em Cortes Clássicos)</option>
-                                    </select>
-                                    <span class="select-arrow">▼</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nome">Nome completo <span class="required-star">*</span></label>
-                                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" autocomplete="name">
-                                <div class="error-message" id="nome-error"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefone">WhatsApp <span class="required-star">*</span></label>
-                                <input type="tel" id="telefone" name="telefone" required placeholder="(86) 9XXXX-XXXX" autocomplete="tel">
-                                <div class="error-message" id="telefone-error"></div>
+<section id="agendamento" class="section agendamento-section">
+    <div class="container">
+        <div class="section-header centered">
+            <span class="section-tag">Reserve seu horário</span>
+            <h2 class="section-title">Agende <span class="gold-text">Seu Horário</span></h2>
+        </div>
+        
+        <div class="agendamento-wrapper">
+            <div class="agendamento-card">
+                <div class="card-bg-pattern"></div>
+                <form id="agendamento-form" class="agendamento-form" autocomplete="on">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="servico">Serviço desejado <span class="required-star">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="servico" name="servico" required>
+                                    <option value="" disabled selected>Selecione um serviço</option>
+                                    <option value="Corte Masculino Social - R$ 25">Corte Masculino Social - R$ 25</option>
+                                    <option value="Barba - R$ 25">Barba - R$ 25</option>
+                                    <option value="Corte Degradê - R$ 25">Corte Degradê - R$ 25</option>
+                                    <option value="Degradê Navalhado - R$ 30">Degradê Navalhado - R$ 30</option>
+                                    <option value="Cabelo + Barba (Combo) - R$ 50">Cabelo + Barba (Combo) - R$ 50</option>
+                                    <option value="Corte Americano - R$ 30">Corte Americano - R$ 30</option>
+                                    <option value="Corte Low Fade - R$ 30">Corte Low Fade - R$ 30</option>
+                                    <option value="Corte do Jaca - R$ 30">Corte do Jaca - R$ 30</option>
+                                    <option value="Cavanhaque - R$ 10">Cavanhaque - R$ 10</option>
+                                    <option value="Sobrancelha - R$ 5">Sobrancelha - R$ 5</option>
+                                    <option value="Freestyle - R$ 10">Freestyle - R$ 10</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <div class="form-checkbox">
-                                <input type="checkbox" id="politica" required>
-                                <label for="politica">Li e aceito a <a href="#" id="politica-agendamento" class="politica-link">Política de Agendamento</a> <span class="required-star">*</span></label>
+                            <label for="data">Data do agendamento <span class="required-star">*</span></label>
+                            <input type="date" id="data" name="data" required min="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="horario">Horário preferencial <span class="required-star">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="horario" name="horario" required>
+                                    <option value="" disabled selected>Selecione um horário</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
                             </div>
+                            <small class="form-hint">⏰ Horário de almoço: 12:00 às 14:00</small>
                         </div>
                         
-                        <button type="submit" id="agendar-whatsapp" class="btn btn-agendar">
-                            <span id="btn-text">Agendar via WhatsApp</span>
-                            <div class="btn-spinner" style="display: none;"></div>
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Ícone do WhatsApp" class="btn-whatsapp-icon">
-                        </button>
-                    </form>
+                        <div class="form-group">
+                            <label for="profissional">Profissional <span class="required-star">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="profissional" name="profissional" required>
+                                    <option value="" disabled selected>Selecione um profissional</option>
+                                    <option value="nonato">Nonato (Mestre - Especialista em Barba)</option>
+                                    <option value="junior">Junior (Especialista em Degradê)</option>
+                                    <option value="paulinho">Paulinho (Especialista em Fade)</option>
+                                    <option value="irmao">Irmão (Especialista em Cortes Clássicos)</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div class="agendamento-info">
-                        <div class="info-item">
-                            <span class="info-icon">📞</span>
-                            <div>
-                                <h4>Atendimento</h4>
-                                <p>Terça a Sábado, 09:00 às 19:00</p>
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome completo <span class="required-star">*</span></label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" autocomplete="name">
+                            <div class="error-message" id="nome-error"></div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">⏰</span>
-                            <div>
-                                <h4>Duração média</h4>
-                                <p>30 a 60 minutos por serviço</p>
-                            </div>
+                        <div class="form-group">
+                            <label for="telefone">WhatsApp <span class="required-star">*</span></label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(86) 9XXXX-XXXX" autocomplete="tel">
+                            <div class="error-message" id="telefone-error"></div>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon">📍</span>
-                            <div>
-                                <h4>Localização</h4>
-                                <p>Av. do Contorno - Centro</p>
-                            </div>
+                    </div>
+                    
+                    <!-- REMOVIDO O CHECKBOX DA POLÍTICA DE AGENDAMENTO -->
+                    
+                    <button type="submit" id="agendar-whatsapp" class="btn btn-agendar">
+                        <span id="btn-text">Agendar via WhatsApp</span>
+                        <div class="btn-spinner" style="display: none;"></div>
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Ícone do WhatsApp" class="btn-whatsapp-icon">
+                    </button>
+                </form>
+                
+                <div class="agendamento-info">
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Atendimento</h4>
+                            <p>Terça a Sábado, 09:00 às 19:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <h4>Duração média</h4>
+                            <p>30 a 60 minutos por serviço</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Av. do Contorno - Centro</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- MODAL DE POLÍTICA DE AGENDAMENTO -->
     <div id="modal-politica-agendamento" class="modal">

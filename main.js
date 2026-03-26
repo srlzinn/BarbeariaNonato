@@ -7,29 +7,43 @@ document.addEventListener('DOMContentLoaded', function() {
         nonato: {
             nome: "Nonato",
             telefone: "5586994645340",
-            especialidade: "Barba"
+            especialidade: "Barba",
+            horariosDisponiveis: ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00']
         },
         junior: {
             nome: "Junior",
             telefone: "5586994645340",
-            especialidade: "Degradê"
+            especialidade: "Degradê",
+            horariosDisponiveis: ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00']
         },
         paulinho: {
             nome: "Paulinho",
             telefone: "5586994645340",
-            especialidade: "Fade"
+            especialidade: "Fade",
+            horariosDisponiveis: ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00']
         },
         irmao: {
             nome: "Irmão",
             telefone: "5586994645340",
-            especialidade: "Cortes Clássicos"
+            especialidade: "Cortes Clássicos",
+            horariosDisponiveis: ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00']
         }
     };
 
-    // Horários indisponíveis (simulação - poderia vir de um banco de dados)
-    const horariosIndisponiveis = {
-        '2026-03-25': ['14:00', '15:00'],
-        '2026-03-26': ['17:00']
+    // Horários indisponíveis por data e profissional (simulação - poderia vir de um banco de dados)
+    const agendamentosExistentes = {
+        '2026-03-25': {
+            nonato: ['14:00', '15:00'],
+            junior: ['10:00'],
+            paulinho: ['16:00'],
+            irmao: ['09:00']
+        },
+        '2026-03-26': {
+            nonato: ['17:00'],
+            junior: ['14:00', '15:00'],
+            paulinho: ['11:00'],
+            irmao: ['18:00']
+        }
     };
 
     // Feriados (simulação)
@@ -100,8 +114,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ===== VERIFICAR HORÁRIO MÍNIMO DE ANTECEDÊNCIA =====
+    function isHorarioValido(data, horario) {
+        const now = new Date();
+        const dataHoraAgendamento = new Date(`${data}T${horario}:00`);
+        
+        // Calcula diferença em horas
+        const diffHoras = (dataHoraAgendamento - now) / (1000 * 60 * 60);
+        
+        // Se for hoje, precisa ter pelo menos 2 horas de antecedência
+        const hoje = new Date();
+        hoje.setHours(0, 0, 0, 0);
+        const dataAgendamento = new Date(data);
+        dataAgendamento.setHours(0, 0, 0, 0);
+        
+        if (dataAgendamento.getTime() === hoje.getTime()) {
+            if (diffHoras < 2) {
+                showNotification(`Agendamentos para hoje devem ser feitos com no mínimo 2 horas de antecedência. Horário ${horario} indisponível.`, 'error');
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    // ===== VERIFICAR SE É HORÁRIO DE ALMOÇO =====
+    function isHorarioAlmoco(horario) {
+        const hora = parseInt(horario.split(':')[0]);
+        return hora >= 12 && hora < 14;
+    }
+
     // ===== CONFIGURAR DATA MÍNIMA E VERIFICAR FERIADOS =====
     const dataInput = document.getElementById('data');
+    const profissionalSelect = document.getElementById('profissional');
+    
     if (dataInput) {
         function getTodayDateFormatted() {
             const today = new Date();
@@ -146,13 +192,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Atualizar horários disponíveis baseado na data selecionada
-            atualizarHorariosDisponiveis(selectedDate);
+            // Atualizar horários disponíveis baseado na data e profissional selecionado
+            const profissionalId = profissionalSelect?.value;
+            if (profissionalId) {
+                atualizarHorariosDisponiveis(selectedDate, profissionalId);
+            }
         });
     }
     
     // ===== ATUALIZAR HORÁRIOS DISPONÍVEIS =====
-    function atualizarHorariosDisponiveis(selectedDate) {
+    function atualizarHorariosDisponiveis(selectedDate, profissionalId) {
         const horarioSelect = document.getElementById('horario');
         if (!horarioSelect) return;
         
@@ -167,33 +216,94 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Horários padrão
-        const todosHorarios = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
+        // Obter horários do profissional selecionado
+        const profissional = profissionais[profissionalId];
+        if (!profissional) return;
         
-        // Obter horários indisponíveis para a data selecionada
-        const horariosOcupados = horariosIndisponiveis[selectedDate] || [];
+        const horariosDisponiveisProfissional = profissional.horariosDisponiveis || [];
+        
+        // Obter horários já agendados para esta data e profissional
+        const horariosAgendados = agendamentosExistentes[selectedDate]?.[profissionalId] || [];
         
         // Adicionar horários disponíveis
-        todosHorarios.forEach(horario => {
-            if (!horariosOcupados.includes(horario)) {
-                const option = document.createElement('option');
-                option.value = horario;
-                option.textContent = horario;
-                horarioSelect.appendChild(option);
+        horariosDisponiveisProfissional.forEach(horario => {
+            // Verificar se é horário de almoço
+            if (isHorarioAlmoco(horario)) {
+                // Pular horário de almoço
+                return;
             }
+            
+            // Verificar se já está agendado
+            const isAgendado = horariosAgendados.includes(horario);
+            
+            const option = document.createElement('option');
+            option.value = horario;
+            option.textContent = horario;
+            
+            if (isAgendado) {
+                option.disabled = true;
+                option.textContent = `${horario} (indisponível)`;
+                option.style.backgroundColor = '#f0f0f0';
+                option.style.color = '#999';
+            }
+            
+            horarioSelect.appendChild(option);
         });
         
-        // Restaurar valor anterior se ainda estiver disponível
-        if (valorAtual && Array.from(horarioSelect.options).some(opt => opt.value === valorAtual)) {
-            horarioSelect.value = valorAtual;
-        } else if (horarioSelect.options.length > 1) {
-            horarioSelect.value = horarioSelect.options[1].value;
+        // Verificar se há horários disponíveis
+        const horariosDisponiveis = Array.from(horarioSelect.options).some(opt => opt.value && !opt.disabled);
+        
+        if (!horariosDisponiveis) {
+            showNotification(`Não há horários disponíveis para ${profissional.nome} nesta data. Por favor, escolha outra data ou profissional.`, 'error');
         }
         
-        // Se não houver horários disponíveis, mostrar mensagem
-        if (horarioSelect.options.length <= 1) {
-            showNotification('Não há horários disponíveis para esta data. Por favor, escolha outra data.', 'error');
+        // Restaurar valor anterior se ainda estiver disponível e não estiver desabilitado
+        if (valorAtual && Array.from(horarioSelect.options).some(opt => opt.value === valorAtual && !opt.disabled)) {
+            horarioSelect.value = valorAtual;
+        } else if (horarioSelect.options.length > 1) {
+            // Selecionar o primeiro horário disponível
+            const primeiroDisponivel = Array.from(horarioSelect.options).find(opt => opt.value && !opt.disabled);
+            if (primeiroDisponivel) {
+                horarioSelect.value = primeiroDisponivel.value;
+            }
         }
+    }
+    
+    // ===== EVENTO PARA QUANDO O PROFISSIONAL É ALTERADO =====
+    if (profissionalSelect) {
+        profissionalSelect.addEventListener('change', function() {
+            const profissionalId = this.value;
+            const selectedDate = dataInput?.value;
+            
+            if (selectedDate && profissionalId) {
+                atualizarHorariosDisponiveis(selectedDate, profissionalId);
+            }
+        });
+    }
+    
+    // ===== EVENTO PARA QUANDO O HORÁRIO É ALTERADO =====
+    const horarioSelect = document.getElementById('horario');
+    if (horarioSelect) {
+        horarioSelect.addEventListener('change', function() {
+            const selectedHorario = this.value;
+            const selectedDate = dataInput?.value;
+            const profissionalId = profissionalSelect?.value;
+            
+            if (selectedDate && selectedHorario && profissionalId) {
+                // Verificar horário de almoço
+                if (isHorarioAlmoco(selectedHorario)) {
+                    showNotification('Horário de almoço (12:00 às 14:00). Por favor, escolha outro horário.', 'error');
+                    this.value = '';
+                    return;
+                }
+                
+                // Verificar antecedência mínima
+                if (!isHorarioValido(selectedDate, selectedHorario)) {
+                    this.value = '';
+                    return;
+                }
+            }
+        });
     }
 
     // ===== GERAR LINK DE AGENDAMENTO COMPLETO =====
@@ -281,6 +391,21 @@ Aguardo sua confirmação. Obrigado!
             if (horarioGroup) horarioGroup.classList.add('error');
             showNotification('Por favor, selecione um horário.', 'error');
             isValid = false;
+        } else {
+            // Verificar horário de almoço
+            if (isHorarioAlmoco(horario)) {
+                const horarioGroup = document.getElementById('horario')?.closest('.form-group');
+                if (horarioGroup) horarioGroup.classList.add('error');
+                showNotification('Horário de almoço (12:00 às 14:00). Por favor, escolha outro horário.', 'error');
+                isValid = false;
+            }
+            
+            // Verificar antecedência mínima
+            if (data && !isHorarioValido(data, horario)) {
+                const horarioGroup = document.getElementById('horario')?.closest('.form-group');
+                if (horarioGroup) horarioGroup.classList.add('error');
+                isValid = false;
+            }
         }
         
         // Validar profissional
@@ -311,66 +436,68 @@ Aguardo sua confirmação. Obrigado!
         return isValid;
     }
 
-    // ===== AGENDAMENTO WHATSAPP COM LOADING =====
-    const btnAgendar = document.getElementById('agendar-whatsapp');
-    const btnText = document.getElementById('btn-text');
-    const btnSpinner = document.querySelector('.btn-spinner');
-    
-    if (btnAgendar) {
-        btnAgendar.addEventListener('click', async function(e) {
-            e.preventDefault();
+   // ===== AGENDAMENTO WHATSAPP COM LOADING =====
+const btnAgendar = document.getElementById('agendar-whatsapp');
+const btnText = document.getElementById('btn-text');
+const btnSpinner = document.querySelector('.btn-spinner');
+
+if (btnAgendar) {
+    btnAgendar.addEventListener('click', async function(e) {
+        e.preventDefault();
+        
+        // Capturar valores
+        const servicoSelect = document.getElementById('servico');
+        const servico = servicoSelect?.value?.trim() || '';
+        const data = document.getElementById('data')?.value || '';
+        const horario = document.getElementById('horario')?.value?.trim() || '';
+        const profissionalSelect = document.getElementById('profissional');
+        const profissionalId = profissionalSelect?.value?.trim() || '';
+        const nome = document.getElementById('nome')?.value?.trim() || '';
+        const telefone = document.getElementById('telefone')?.value?.trim() || '';
+        
+        // REMOVIDA a validação da política de agendamento
+        
+        // Validar formulário
+        if (!validarFormulario(servico, data, horario, profissionalId, nome, telefone)) {
+            return;
+        }
+        
+        // Verificar novamente se o horário está disponível (evitar agendamentos duplicados após validação)
+        const horariosAgendados = agendamentosExistentes[data]?.[profissionalId] || [];
+        if (horariosAgendados.includes(horario)) {
+            showNotification('Este horário já foi agendado. Por favor, escolha outro horário.', 'error');
+            return;
+        }
+        
+        // Mostrar loading
+        const originalText = btnText?.innerText || 'Agendar via WhatsApp';
+        if (btnText) btnText.innerText = 'Processando...';
+        if (btnSpinner) btnSpinner.style.display = 'inline-block';
+        btnAgendar.disabled = true;
+        
+        // Simular pequeno delay para feedback visual
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // Gerar link
+        const linkWhatsApp = gerarLinkAgendamentoCompleto(profissionalId, servico, data, horario, nome, telefone);
+        
+        // Restaurar botão
+        if (btnText) btnText.innerText = originalText;
+        if (btnSpinner) btnSpinner.style.display = 'none';
+        btnAgendar.disabled = false;
+        
+        // Abrir WhatsApp
+        if (linkWhatsApp) {
+            window.open(linkWhatsApp, '_blank');
+            showNotification('Redirecionando para o WhatsApp!', 'success');
             
-            // Capturar valores
-            const servicoSelect = document.getElementById('servico');
-            const servico = servicoSelect?.value?.trim() || '';
-            const data = document.getElementById('data')?.value || '';
-            const horario = document.getElementById('horario')?.value?.trim() || '';
-            const profissionalSelect = document.getElementById('profissional');
-            const profissionalId = profissionalSelect?.value?.trim() || '';
-            const nome = document.getElementById('nome')?.value?.trim() || '';
-            const telefone = document.getElementById('telefone')?.value?.trim() || '';
-            const politicaCheck = document.getElementById('politica');
-            
-            // Validar política
-            if (!politicaCheck?.checked) {
-                showNotification('Você precisa aceitar a Política de Agendamento.', 'error');
-                return;
-            }
-            
-            // Validar formulário
-            if (!validarFormulario(servico, data, horario, profissionalId, nome, telefone)) {
-                return;
-            }
-            
-            // Mostrar loading
-            const originalText = btnText?.innerText || 'Agendar via WhatsApp';
-            if (btnText) btnText.innerText = 'Processando...';
-            if (btnSpinner) btnSpinner.style.display = 'inline-block';
-            btnAgendar.disabled = true;
-            
-            // Simular pequeno delay para feedback visual
-            await new Promise(resolve => setTimeout(resolve, 500));
-            
-            // Gerar link
-            const linkWhatsApp = gerarLinkAgendamentoCompleto(profissionalId, servico, data, horario, nome, telefone);
-            
-            // Restaurar botão
-            if (btnText) btnText.innerText = originalText;
-            if (btnSpinner) btnSpinner.style.display = 'none';
-            btnAgendar.disabled = false;
-            
-            // Abrir WhatsApp
-            if (linkWhatsApp) {
-                window.open(linkWhatsApp, '_blank');
-                showNotification('Redirecionando para o WhatsApp!', 'success');
-                
-                // Limpar formulário após sucesso (opcional)
-                // document.getElementById('agendamento-form')?.reset();
-            } else {
-                showNotification('Erro ao gerar link de agendamento. Tente novamente.', 'error');
-            }
-        });
-    }
+            // Opcional: limpar formulário após sucesso
+            // document.getElementById('agendamento-form')?.reset();
+        } else {
+            showNotification('Erro ao gerar link de agendamento. Tente novamente.', 'error');
+        }
+    });
+}
 
     // ===== CURSOR PERSONALIZADO =====
     const cursor = document.querySelector('.cursor');
